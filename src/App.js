@@ -38,18 +38,18 @@ function App() {
 
   return (
     <>
-      <header className="p-5 flex justify-between items-center">
+      <header className="px-5 pt-4 pb-2 flex justify-between items-center">
         <div className="lg:flex justify-start items-start">
           <img src={logo} alt="" className="lg:mr-6"/>
 
-          <nav className="navbar open">
+          <nav className="navbar ">
             <div>
               <button onClick={()=>setFeatures(!openFeature)} className="flex items-center justify-start">
                 Feature {openFeature ? <img src={chevronUp} alt="" className="ml-2" /> : <img src={chevronDown} alt="" className="ml-2" />}
               </button>
 
 
-              {openFeature &&               <ul className="mt-2 lg:p-3 lg:shadow">
+              {openFeature && <ul className="mt-2 lg:p-3 lg:shadow">
                 <li className="flex items-center justify-start text-small mb-2">
                    <img src={todolist} alt="" className="mr-2"/>ToDO List
                 </li>
@@ -102,19 +102,19 @@ function App() {
         </div>
 
         <div className="lg:hidden">
-          <button onClick={handelOpenMenu}>
+          <button onClick={handelOpenMenu} className=" size-6">
             <img src={menuOpen} alt="" className="menu-button"/>
           </button>
         </div>
 
         <div className="hidden lg:block">
-          <button className="mr-10 opacity-75">Login</button>
-          <button className="border-2 border-black opacity-75 px-6 py-2 rounded-xl">Register</button>
+          <button className="mr-10 opacity-75 hover:border-2 hover:border-black px-6 py-2 hover:rounded-xl">Login</button>
+          <button className="border-2 border-black opacity-75 px-6 py-2 rounded-xl hover:bg-black hover:text-white transition-colors">Register</button>
         </div>
       </header>
 
 
-      <section className=" flex flex-col-reverse md:grid py-20 md:gap-10 md:grid-cols-2 md:place-items-center max-w-4xl lg:max-w-5xl md:mx-auto">
+      <section className=" flex flex-col-reverse md:grid py-10 lg:py-5 md:gap-10 md:grid-cols-2 md:place-items-center max-w-4xl lg:max-w-5xl md:mx-auto">
         
         <article className="text-center md:text-left px-5 xl:px-0 mt-10 md:mt-0">
           <h1 className="font-bold text-4xl lg:text-6xl xl:text-7xl mb-5">
@@ -124,7 +124,7 @@ function App() {
             Get your team in sync, no matter your location. 
             Streamline process, create team rituals, and watch productivity soar.
           </p>
-          <button className="bg-black rounded-lg shadow text-white font-bold hover:opactiy-75 transition-all duration-150 pt-3 pb-2 px-6 cursor-pointer">
+          <button className="bg-black rounded-lg shadow text-white font-bold hover:opactiy-75 hover:bg-white hover:border-2 hover:border-black hover:text-black transition-all duration-150 pt-3 pb-2 px-6 cursor-pointer">
             Learn more
           </button>
           
@@ -150,13 +150,13 @@ function App() {
         <article>
           <picture>
             <source media="(min-width: 768px)" srcSet={desktop} />
-            <img src={mobile} alt="hero" className="w-full"/>
+            <img src={mobile} alt="hero" className="w-full lg:h-2/5"/>
           </picture>
         </article>
 
       </section>
 
-      <div class="attribution">
+      <div className="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/TejasMore477/intro-section-with-dropdown-navigation-main">Tejas More</a>.
     </div>
