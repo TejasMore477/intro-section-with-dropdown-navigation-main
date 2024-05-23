@@ -155,6 +155,11 @@ function App() {
         </article>
 
       </section>
+
+      <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/TejasMore477/intro-section-with-dropdown-navigation-main">Tejas More</a>.
+    </div>
     </>
   );
 }
